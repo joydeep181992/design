@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YO</title>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+	<style>
+		.parent {
+			width: 1040px;
+			height: 600px;
+			margin: 0 auto;
+			background: #3214ff;
+			position: relative;
+		}
+		.child {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			width: 800px;
+			height: 300px;
+			background: green;
+		}
+
+		.btn {
+		width: 136px;
+		height: 41px;
+		background: #00b0ff;
+		border: none;
+		color: #fff;
+		font-weight: bold;
+		font-family: 'Montserrat', sans-serif;
+		outline: none;
+		box-shadow: 0px 20px 14px -10px rgba(0,0,0,0.45);
+		transition: all .5s ;
+	}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<button class="btn">Hello</button>
+		<div class="child"></div>
+	</div>
+	<script>
+		// let button = document.querySelector('.parent .btn');
+		// let child = document.querySelector('.parent .child');
+
+		// button.addEventListener('click', () => 
+		// 		child.style.display = 'block'
+		// 	);
+		// $(document).ready(() => $('.btn').click(() => $(child).css('display', 'block')));
+		// $(document).ready(function() {
+		// 	$('button').click(function() {
+		// 		alert('hi');
+		// 	})
+		// });
+
+		let noVoter = ['Alex', 'Michael','Harry', 'Dave', 'Michael', 'Victor', 'Harry', 'Alex','Mary','Mary']
+
+		function votes(noVoter) {
+			let name = {};
+			for(let i=0; i<noVoter.length; i++ ){
+				let voteCount = 0;
+				for(let j=i+1;j<=noVoter.length;j++){
+					if(noVoter[i] == noVoter[j]){
+						voteCount += 1;
+					}					
+				}
+				name[noVoter[i]] = voteCount;
+			}
+			return name;
+		}
+
+		console.log(votes(noVoter));
+
+	</script>
+</body>
+</html>

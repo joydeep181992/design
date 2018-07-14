@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yo</title>
+	<style>
+	body {
+		margin: 0;
+		padding: 0;
+	}
+		.box {
+			width: 1040px;
+			height: 200px;
+			background: red;
+			/*margin: 20px auto;*/
+			box-sizing: border-box;
+		}
+		.axies {
+			font-size: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	
+	<p class="axies"></p>
+	<div class="box"></div>
+	<script>
+		let x = document.querySelector('.box');
+		x.addEventListener('mousemove', see);
+
+		function see(e) {
+			console.log(e);
+			let y = e.clientX;
+			let z = e.clientY;
+			let a = 'cordinates are' + y + ', ' + z+ '.';
+			document.querySelector('.axies').innerHTML = a;
+			console.log(a);
+		}
+	</script>
+</body>
+</html>

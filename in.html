@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kdnwd</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.btn {
+			width: 136px;
+			height: 41px;
+			background: #00b0ff;
+			border: none;
+			color: #fff;
+			font-weight: bold;
+			font-family: 'Montserrat', sans-serif;
+			outline: none;
+		}
+
+		.contains {
+			width: 1920px;
+			height: 1216px
+		}
+		.parent {
+			width: 500px;
+			height: 400px;
+			background: url(yoo.jpeg);
+			margin: 0 auto;
+			z-index: -1;
+			position: relative;
+		}
+		.parent:after {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			z-index: 2;
+			background: white;
+			content: '';
+		}
+
+		.nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.nav .branding h1{
+			font-size: 26px;
+			
+		}
+
+		.main-nav {
+			float: left;
+			width: 555px;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: bold;
+			display: flex;
+		}
+		
+		.main-nav ul {
+			list-style: none;
+			padding: 0;
+		}
+		.main-nav ul li {
+			margin: 0;
+			display: inline-block;
+			/*margin-right: 16px;*/
+		}
+		.main-nav a {
+			text-decoration: none;
+			color: black;
+			padding: 2px 10px;
+		}
+		.main-nav ul li a:hover {
+			background-color: #00b0ff;
+			color: #fff;
+		}
+
+		.social {
+			display: flex;
+			justify-content: space-between;
+
+			width: 100px;
+		}
+		.social .icon {
+			margin-left: 10px;
+		}
+		.social .facebook i{
+			border-radius: 50%;
+			border: white;
+			color: black;
+			border: 1px solid transparent;
+			padding: 5px;
+		}
+		.social .insta i{
+			border-radius: 50%;
+			border: white;
+			color: black;
+			border: 1px solid transparent;
+			padding: 5px;
+		}
+		.social .msg i{
+			border-radius: 50%;
+			border: white;
+			color: black;
+			border: 1px solid white;
+			padding: 5px;
+		}
+
+		.select-board {
+			max-width: 1030px;
+			height: 604px;
+			background: pink;
+			margin: 0 auto;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: center;
+		}
+
+		.showcase {
+			width: 50%;
+			height: 100%;
+			background: white;
+			/*border: 1px solid black;*/
+			position: relative;
+			/*float: left;*/
+		}
+		.showcase .design {
+			width: 90%;
+			height: 100%;
+			background: #00b0ff;
+			clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0 100%);
+			/*clip-path: */
+		}
+
+		.showcase .image{
+			position: absolute;
+			top: 72px;
+			left: 49px;
+			/*background: blue;*/
+			width: 338px;
+			height: 480px;
+			background: url(images/surboard-all/board-main.png);
+			background-size: cover;
+			filter: drop-shadow(0 2px 6px #000);
+		}
+
+		.showcase .imagess {
+			position: absolute;
+			top: 26%;
+			left: 84%;
+			height: 292px;
+			box-sizing: border-box;
+		}
+
+		.showcase .imagess .box1 {
+			width: 70px;
+			height: 70px;
+			/*background: black;*/
+			margin-bottom: 4px;
+			border: 0.5px solid #f0f0f0;
+		}
+
+		.showcase .imagess .box1:hover {
+			width: 70px;
+			height: 70px;
+			/*background: black;*/
+			margin-bottom: 4px;
+			box-shadow: 0.3px 0px 10px -1px rgba(0,0,0,0.7);
+			border: 1px solid #00b0ff;
+		}
+
+		.showcase .imagess .box1:nth-child(1){
+			background: url(images/surboard-all/board-main.png);
+			box-sizing: border-box;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.showcase .imagess .box1:nth-child(2){
+			background: url(images/surboard-all/images/sub-board-2.png);
+			box-sizing: border-box;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.showcase .imagess .box1:nth-child(3){
+			background: url(images/surboard-all/images/sub-board-3.png);
+			box-sizing: border-box;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.showcase .imagess .box1:nth-child(4){
+			background: url(images/surboard-all/images/sub-board-4.png);
+			box-sizing: border-box;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+
+
+		.details {
+			width: 50%;
+			height: 100%;
+			background: #ffffff;
+			position: relative;
+			padding-top: 45px;
+			padding-left: 45px;
+			/*float: right;*/
+		}
+
+		.details .header {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+
+		.details .header h1 {
+			font-size: 20px;
+			width: 340px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bold;
+		}
+	
+		.details .arrow {
+			width: 78px;
+			height: 40px;
+			background: #f2d800;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			position: absolute;
+			left: 93%;
+		}
+
+		.details .arrow i {
+			color: white;
+			font-size: 20px;
+		}
+		.details .rating {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.details .rating .star {
+			width: 120px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.details .rating .star i {
+			color: #f2d800;
+		}
+		.details .rating .star i:last-child {
+			color: #fff;
+		}
+		.details .rating .rate {
+			background: black;
+			color: #fff;
+			width: 58px;
+			height: 40px;
+		}
+
+		.details .rating .rate p {
+			padding: 10px 12px;
+		}
+
+		.container {
+			width: 420px;
+		}
+
+		.specs  {
+			display: flex;
+			flex-direction: column;
+			color: #a0a0a0;
+			margin-bottom: 38px;
+
+		}
+
+		.specs ul {
+			margin-bottom: 30px;
+			margin-top: 38px;
+			list-style: none;
+			padding: 0;
+			width: 420px;
+			border-bottom: 1px solid #a0a0a0;
+			padding-bottom: 10px;
+		}
+		
+		.specs a:hover {
+			border-bottom: 5px solid #00b0ff;
+			color: #000;
+			padding-bottom: 7px;
+		}
+
+		.specs ul li {
+			margin: 0;
+			display: inline-block;
+			margin-right: 28px;
+			margin-left: 0; 
+		}
+		.specs a {
+			text-decoration: none;
+			color: #a0a0a0;
+			text-transform: uppercase;
+			font-size: 15px;
+			letter-spacing: 1px;
+			font-family: 'Raleway',sans-serif;
+		}
+		.specs p {
+			line-height: 1.5;
+			font-size: 16px;
+			font-family: 'Montserrat', sans-serif;
+		}
+		
+		.buy {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width: 264px;
+			margin-bottom: 82px;
+		}
+		.buy h2 {
+			margin-right: 28px;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.link a {
+			text-decoration: none;
+			color: #00b0ff;
+			text-transform: uppercase;
+			font-size: 15px;
+			letter-spacing: 1px;
+			font-family: 'Raleway',sans-serif;
+			font-weight: bold;
+			border-bottom: 1px solid #00b0ff;
+		}
+
+		.image {
+			background: url(images/i1.jpg);
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 700px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="image"></div>
+	
+	<div class="nav">
+		<div class="branding">
+			<h1>Sufers Co.</h1>
+		</div>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="#">Boards</a></li>
+				<li><a href="#">Accessories</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Technology</a></li>
+				<li><a href="#">Teams</a></li>
+				<li><a href="#">Dealers</a></li>
+			</ul>
+		</nav>
+		<div class="social">
+			<div class="icon facebook">
+				<i class="fab fa-facebook-f"></i>
+			</div>
+			<div class="icon insta">
+				<i class="fab fa-instagram"></i>
+			</div>
+			<div class="icon msg">
+				<i class="fas fa-envelope"></i>
+			</div>
+			
+		</div>
+	</div>
+	<div class="select-board">
+		<div class="showcase">
+			<div class="design"></div>
+			<div class="image"></div>
+			<div class="imagess">
+				<div class="box1">
+				</div>
+				<div class="box1">
+				</div>
+				<div class="box1">
+				</div>
+				<div class="box1">
+				</div>
+			</div>
+
+		</div>
+		<div class="details">			
+			<div class="header">
+				<h1>JR Surfboards The Donny Stoker Yellow/Green Rail Fade</h1>
+				<div class="arrow">
+					<i class="fas fa-arrow-left"></i>
+					<i class="fas fa-arrow-right"></i>
+				</div>
+			</div>
+			<div class="rating">
+				<div class="star">
+					<i class="far fa-star"></i>
+					<i class="far fa-star"></i>
+					<i class="far fa-star"></i>
+					<i class="far fa-star"></i>
+					<i class="far fa-star"></i>
+					<p>(56)</p>
+				</div>
+				<div class="rate">
+					<p>05/25</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="specs">
+					<ul>
+						<li><a href="#"><strong>Description</strong></a></h2></li>
+						<li><a href="#"><strong>Feature</strong></a></h2></li>
+						<li><a href="#"><strong>Dimension</strong></a></h2></li>
+					</ul>
+					<p>Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.</p>
+				</div>
+				<div class="buy">
+					<h2>$499.99</h2>
+					<button class="btn">BUY NOW</button>
+				</div>
+				<div class="link">
+					<a href="#">VIEW ALL BOARDS</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PIO</title>
+	<style>
+		.parent {
+			width: 980px;
+			height: 800px;
+			margin: 0 auto;
+			background: #f3f3f3;
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+		}
+		.btn {
+			width: 50%;
+		}
+		.btn-1 {
+			float: left;
+		}
+		.body {
+			width: 100%;
+			height: 100%;
+			margin-top: 20%; 
+		}
+
+		.hide {
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="buttons">
+			<button class="btn btn-1">EAT</button>
+			<button class="btn btn-2">DRINK</button>
+		</div>
+		<div class="body body-1">
+			<h1>Eat</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse alias ipsum aliquid quisquam unde dolorem fugiat error necessitatibus voluptatum inventore est repellendus, cumque in culpa iste odit, maxime at sapiente.</p><br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem at fuga consequuntur numquam accusantium eveniet et itaque, enim, eos dicta quas facilis ratione non alias nulla neque aliquam doloribus libero?</p>
+		</div>
+		<div class="body body-2">
+			<h1>Drink</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nam ab a. Quo ea quam accusantium a alias porro earum reiciendis quaerat, dolore sit, eligendi atque cum quibusdam, ullam tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus tempore inventore libero praesentium non placeat illo odit tenetur suscipit, ratione maxime beatae, cupiditate in, eius distinctio laborum optio nulla! Minima.</p>
+		</div>
+	</div>
+	<script>
+		let btn = document.querySelector('.buttons');
+		let btn2 = document.querySelector('.buttons .btn-2');
+		let body1 = document.querySelector('.body-1');
+		let body2 = document.querySelector('.body-2');
+		// btn1.addEventListener('click', () => body2.style.display = 'none');
+		// btn2.addEventListener('click', () => body1.style.display = 'none');
+		btn.addEventListener('click', toggle);
+
+		// let toggle = () => alert('hi');
+
+		function toggle(e) {
+			if(e.target.className == 'btn btn-1') {
+				body2.classList.add('hide');
+			}
+			else {
+				body1.classList.add('hide');
+			}
+		}
+
+		// console.log(toggle);
+	</script>
+</body>
+</html>
